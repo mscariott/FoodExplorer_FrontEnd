@@ -5,6 +5,9 @@ Para o acesso do projeto pode ser efetuado através de uma conta admin como os d
 login: admin@email.com
 senha: 123456
 
+login: user@email.com
+senha: 123456
+
 A criação de usuários permite apenas cadastrar clientes e a conta admin vou cadastrada através do insomina,
 o cliente pode selecionar seus pratos favoritos e incluir em seu carrinho. A pesquisa pode ser realizada pelo
 nome do prato ou ingredintes utilizado no mesmo, o campo de pesquisa se encontra no header para versão desktop,
