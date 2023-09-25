@@ -91,8 +91,6 @@ export function NewDish() {
       setDisable(false)
     }
 
-    console.log(name, price, description, newIngridient)
-
   }, [name, price, description, newIngridient])
 
   return (

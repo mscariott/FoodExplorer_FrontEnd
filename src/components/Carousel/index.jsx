@@ -33,7 +33,6 @@ export function Carousel({ title, name, isFavorite }) {
     if(carousel.current.scrollLeft < 20){
       carousel.current.scrollLeft = 0
     }
-    console.log(carousel.current.scrollLeft)
   }
 
 
@@ -41,7 +40,6 @@ export function Carousel({ title, name, isFavorite }) {
     e.preventDefault()
    
     innerWidth > 1024 ? carousel.current.scrollLeft = carousel.current.scrollLeft + 500 : carousel.current.scrollLeft = carousel.current.scrollLeft + 210
-    console.log(carousel.current.scrollLeft)
   }
 
   useEffect(() => {

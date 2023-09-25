@@ -77,11 +77,6 @@ export function Card({ data, onClick, isFavorite }) {
     navigate(`/edit/${data.id}`)
   }
 
-
-  useEffect(() => {
-    console.log(isFavorite, favorite, Number(data.id))
-  }, [ favorite])
-
   return (
     <Container
       role="button"
