@@ -14,12 +14,15 @@ export function SignIn() {
 
   const { signIn } = useAuth()
 
+  const [loading, setLoading] = useState(false)
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
 
-  function handleSignIn() {
-    signIn({ email, password })
+  async function handleSignIn() {
+    setLoading(true)
+    await signIn({ email, password })
+    setLoading(false)
   }
 
 
@@ -50,7 +53,7 @@ export function SignIn() {
           />
         </InputWrapper>
 
-        <Button title="Entrar" onClick={handleSignIn} />
+        <Button title={loading ? "Carregando..." : "Entrar"} onClick={handleSignIn} disabled={loading} />
 
         <Link to="/register" >
           Criar uma conta
