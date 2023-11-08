@@ -1,4 +1,4 @@
-import { Container, Form, InputWrapper } from './styles'
+import { Container, Form, InputWrapper, Demo } from './styles'
 import { Link } from 'react-router-dom'
 import { useState } from "react"
 
@@ -18,6 +18,12 @@ export function SignIn() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
+  async function handleSignInAsDemo(demoEmail, demoPassword) {
+    setLoading(true)
+    await signIn({ email: demoEmail, password: demoPassword })
+    setLoading(false)
+
+  }
 
   async function handleSignIn() {
     setLoading(true)
@@ -54,6 +60,22 @@ export function SignIn() {
         </InputWrapper>
 
         <Button title={loading ? "Carregando..." : "Entrar"} onClick={handleSignIn} disabled={loading} />
+
+        <Demo>
+        <Button title={loading ? "Carregando..." : "Entrar como Admin"} 
+        onClick={() => {
+          handleSignInAsDemo("admin@email.com","123456")
+        }
+        } 
+        disabled={loading} />
+
+        <Button title={loading ? "Carregando..." : "Entrar como User"} 
+        onClick={() => {
+          handleSignInAsDemo("user@email.com","123456")
+        }
+        } 
+        disabled={loading} />
+        </Demo>
 
         <Link to="/register" >
           Criar uma conta

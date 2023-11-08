@@ -62,9 +62,9 @@ gap:3.2rem;
 @media(min-width: 1024px){
   min-width: 47.6rem;
   background-color: ${({ theme }) => theme.COLORS.DARK_700};
-  padding: 6.4rem;
+  padding: 6.4rem 6.4rem 0 6.4rem;
   border-radius: 1.6rem;
-  height: 54rem;
+  height: 56rem;
   margin-top : 0;
 }
 
@@ -79,4 +79,16 @@ gap: 0.8rem;;
   color: ${({ theme }) => theme.COLORS.LIGHT_400};
   font-size: 1.6rem;  
  }
+`
+
+export const Demo = styled.div`
+display: flex;
+align-items: center;
+gap: 0.8rem;
+
+>button{
+  background-color: ${({ theme }) => theme.COLORS.DARK_800};
+  padding-left: .6rem;
+  padding-right: .6rem;
+}
 `
